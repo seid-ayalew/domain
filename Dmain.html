@@ -1,0 +1,1018 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EthioDomain | Professional Domain Registration</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            background-color: #f5f7fa;
+        }
+
+        .header {
+            background: linear-gradient(135deg, #2c3e50, #3498db);
+            color: white;
+            padding: 1rem 5%;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        .nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: 700;
+            text-decoration: none;
+            color: white;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+        }
+
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: #ecf0f1;
+        }
+
+        .hero {
+            height: 100vh;
+            background: linear-gradient(rgba(44,62,80,0.9), rgba(52,152,219,0.9)),
+                        url('https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=1920&q=80');
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 0 5%;
+            color: white;
+        }
+
+        .hero-content {
+            max-width: 800px;
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .search-container {
+            background: white;
+            padding: 2rem;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+            margin-top: 2rem;
+        }
+
+        .domain-search {
+            display: flex;
+            gap: 1rem;
+            margin-bottom: 1rem;
+        }
+
+        .domain-search input {
+            flex: 1;
+            padding: 1rem;
+            border: 2px solid #3498db;
+            border-radius: 8px;
+            font-size: 1rem;
+        }
+
+        .search-btn {
+            background: #3498db;
+            color: white;
+            border: none;
+            padding: 1rem 2rem;
+            border-radius: 8px;
+            cursor: pointer;
+            font-weight: 600;
+            transition: background 0.3s;
+        }
+
+        .search-btn:hover {
+            background: #2980b9;
+        }
+
+        .domain-results {
+            text-align: left;
+            margin-top: 1rem;
+        }
+
+        .domain-result {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem;
+            background: #f8f9fa;
+            margin-bottom: 0.5rem;
+            border-radius: 8px;
+        }
+
+        .features {
+            padding: 5rem 5%;
+            background: white;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .feature-card {
+            padding: 2rem;
+            background: #fff;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .feature-card i {
+            font-size: 2.5rem;
+            color: #3498db;
+            margin-bottom: 1rem;
+        }
+
+        footer {
+            background: #2c3e50;
+            color: white;
+            padding: 3rem 5%;
+            text-align: center;
+        }
+
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+
+            .domain-search {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <nav class="nav">
+            <a href="#" class="logo">EthioDomain</a>
+            <div class="nav-links">
+                <a href="#home">Home</a>
+                <a href="#features">Features</a>
+                <a href="#pricing">Pricing</a>
+                <a href="#contact">Contact</a>
+            </div>
+        </nav>
+    </header>
+
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <h1>Secure Your Perfect Domain Name</h1>
+            <p>Professional domain registration with 24/7 support and instant activation</p>
+            
+            <div class="search-container">
+                <div class="domain-search">
+                    <input type="text" placeholder="Search your perfect domain..." id="domainInput">
+                    <button class="search-btn" onclick="checkDomain()">Search Domain</button>
+                </div>
+                <div class="domain-results" id="domainResults"></div>
+            </div>
+        </div>
+    </section>
+
+    <section class="features" id="features">
+        <h2>Why Choose EthioDomain?</h2>
+        <div class="features-grid">
+            <div class="feature-card">
+                <i class="fas fa-shield-alt"></i>
+                <h3>Advanced Security</h3>
+                <p>Enterprise-grade protection for your domain and DNS infrastructure</p>
+            </div>
+            <div class="feature-card">
+                <i class="fas fa-clock"></i>
+                <h3>24/7 Support</h3>
+                <p>Round-the-clock technical support from domain experts</p>
+            </div>
+            <div class="feature-card">
+                <i class="fas fa-rocket"></i>
+                <h3>Instant Activation</h3>
+                <p>Get your domain up and running within minutes</p>
+            </div>
+        </div>
+    </section>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Previous meta tags and links -->
+    <style>
+        /* Previous styles remain the same */
+
+        .pricing {
+            padding: 5rem 5%;
+            background: #f9f9f9;
+        }
+
+        .pricing-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .pricing-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 10px;
+            text-align: center;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+        }
+
+        .pricing-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .price {
+            font-size: 2.5rem;
+            color: #3498db;
+            margin: 1rem 0;
+        }
+
+        .payment-methods {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            margin: 2rem 0;
+        }
+
+        .payment-method {
+            padding: 1rem;
+            border: 2px solid #ddd;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        .payment-method.selected {
+            border-color: #3498db;
+            background: #f0f8ff;
+        }
+
+        .payment-form {
+            max-width: 500px;
+            margin: 2rem auto;
+            background: white;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            color: #2c3e50;
+        }
+
+        .form-group input {
+            width: 100%;
+            padding: 0.8rem;
+            border: 2px solid #ddd;
+            border-radius: 8px;
+            font-size: 1rem;
+        }
+
+        .balance {
+            text-align: center;
+            margin: 2rem 0;
+            font-size: 1.2rem;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header and Hero sections remain the same -->
+
+    <section class="features" id="features">
+        <!-- Features content remains the same -->
+    </section>
+
+    <section class="pricing" id="pricing">
+        <h2>Fund Your Account</h2>
+        <div class="balance">
+            Current Balance: $<span id="balanceAmount">0</span>
+        </div>
+        <!-- Add this to the CSS section -->
+<style>
+    /* Add to existing styles */
+    .free-trial {
+        background: linear-gradient(135deg, #3498db, #2ecc71);
+        color: white;
+        padding: 4rem 5%;
+        text-align: center;
+    }
+
+    .trial-card {
+        background: rgba(255, 255, 255, 0.1);
+        padding: 2rem;
+        border-radius: 15px;
+        backdrop-filter: blur(10px);
+        max-width: 600px;
+        margin: 0 auto;
+    }
+
+    .ribbon {
+        background: #e74c3c;
+        padding: 0.5rem 2rem;
+        position: relative;
+        top: -2rem;
+        display: inline-block;
+        clip-path: polygon(0 0, 100% 0, 90% 100%, 10% 100%);
+    }
+
+    .timer {
+        font-size: 1.5rem;
+        margin: 1rem 0;
+    }
+</style>
+
+<!-- Add this section after the features section -->
+<section class="free-trial" id="trial">
+    <div class="trial-card">
+        <div class="ribbon">Limited Time Offer</div>
+        <h2>Free 2-Month Trial</h2>
+        <p class="timer" id="trialTimer">00:00:00 remaining</p>
+        <p>Get started with your domain completely free for 2 months! No credit card required.</p>
+        <button class="search-btn" onclick="startFreeTrial()" id="trialBtn">Start Free Trial</button>
+        <p style="margin-top: 1rem; font-size: 0.9em;">After trial period: $10/month</p>
+    </div>
+</section>
+
+<!-- Add this to the JavaScript section -->
+<script>
+    // Add these variables at the top
+    let trialEndTime = localStorage.getItem('trialEndTime');
+    let trialActive = false;
+    let trialTimerInterval;
+
+    // Add these functions
+    function startFreeTrial() {
+        if (localStorage.getItem('trialUsed')) {
+            alert('You already used your free trial');
+            return;
+        }
+
+        const trialPeriod = 60 * 60 * 24 * 60; // 60 days in seconds
+        trialEndTime = Date.now() + trialPeriod * 1000;
+        localStorage.setItem('trialEndTime', trialEndTime);
+        localStorage.setItem('trialUsed', 'true');
+        trialActive = true;
+        
+        document.getElementById('trialBtn').disabled = true;
+        document.getElementById('trialBtn').textContent = 'Trial Activated';
+        updateTimer();
+        trialTimerInterval = setInterval(updateTimer, 1000);
+        
+        alert('Free trial activated! You can now register 1 domain for free');
+    }
+
+    function updateTimer() {
+        if (!trialEndTime) return;
+
+        const now = Date.now();
+        const remaining = trialEndTime - now;
+
+        if (remaining <= 0) {
+            clearInterval(trialTimerInterval);
+            document.getElementById('trialTimer').textContent = 'Trial Expired';
+            trialActive = false;
+            return;
+        }
+
+        const days = Math.floor(remaining / (1000 * 60 * 60 * 24));
+        const hours = Math.floor((remaining % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        const minutes = Math.floor((remaining % (1000 * 60 * 60)) / (1000 * 60));
+        const seconds = Math.floor((remaining % (1000 * 60)) / 1000);
+
+        document.getElementById('trialTimer').textContent = 
+            `${days}d ${hours}h ${minutes}m ${seconds}s remaining`;
+    }
+
+    // Modify the registerDomain function
+    function registerDomain(domain) {
+        const domainPrice = 10;
+        const trialDomain = localStorage.getItem('trialDomain');
+
+        if (trialActive) {
+            if (trialDomain) {
+                alert('Free trial only allows 1 domain registration');
+                return;
+            }
+            
+            const expiration = new Date(trialEndTime);
+            alert(`Congratulations! ${domain} has been registered successfully!\nFree trial expires: ${expiration.toDateString()}`);
+            localStorage.setItem('trialDomain', domain);
+            document.getElementById('domainInput').value = '';
+            document.getElementById('domainResults').innerHTML = '';
+            return;
+        }
+
+        if (userBalance >= domainPrice) {
+            userBalance -= domainPrice;
+            document.getElementById('balanceAmount').textContent = userBalance.toFixed(2);
+            alert(`Congratulations! ${domain} has been registered successfully!\nRemaining balance: $${userBalance}`);
+            document.getElementById('domainInput').value = '';
+            document.getElementById('domainResults').innerHTML = '';
+        } else {
+            alert(`Insufficient balance! Domain registration requires $${domainPrice}.\nPlease fund your account first.`);
+        }
+    }
+
+    // Initialize timer on page load
+    if (trialEndTime) {
+        trialActive = Date.now() < trialEndTime;
+        if (trialActive) {
+            document.getElementById('trialBtn').disabled = true;
+            document.getElementById('trialBtn').textContent = 'Trial Activated';
+            updateTimer();
+            trialTimerInterval = setInterval(updateTimer, 1000);
+        }
+    }
+</script>
+        <div class="pricing-grid">
+            <div class="pricing-card">
+                <h3>Starter</h3>
+                <div class="price">100birr</div>
+                <p>Register 1 domain for 1 year</p>
+                <button class="search-btn" onclick="selectAmount(10)">Select</button>
+            </div>
+            <div class="pricing-card">
+                <h3>Professional</h3>
+                <div class="price">500birr</div>
+                <p>Register up to 5 domains</p>
+                <button class="search-btn" onclick="selectAmount(50)">Select</button>
+            </div>
+            <div class="pricing-card">
+                <h3>Enterprise</h3>
+                <div class="price">1000birr</div>
+                <p>Bulk domain registration</p>
+                <button class="search-btn" onclick="selectAmount(100)">Select</button>
+            </div>
+        </div>
+<!-- Add to CSS -->
+<style>
+    /* Payment Methods */
+    .payment-methods {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 1rem;
+        margin: 2rem 0;
+    }
+
+    .payment-method {
+        padding: 1.5rem;
+        border: 2px solid #ddd;
+        border-radius: 10px;
+        cursor: pointer;
+        transition: all 0.3s;
+        text-align: center;
+    }
+
+    .payment-method.selected {
+        border-color: #3498db;
+        background: #f0f8ff;
+    }
+
+    .payment-method img {
+        width: 80px;
+        height: 40px;
+        object-fit: contain;
+        margin-bottom: 1rem;
+    }
+
+    .bank-fields {
+        display: none;
+        margin-top: 1rem;
+    }
+</style>
+
+<!-- Modified Payment Section -->
+<div class="payment-form">
+    <h3>Ethiopian Payment Methods</h3>
+    
+    <div class="payment-methods">
+        <div class="payment-method" onclick="selectPayment('telebirr')">
+            <img src="https://telebirr.com.et/wp-content/uploads/2021/05/telebirr-logo.png" alt="Telebirr">
+            <p>Telebirr</p>
+        </div>
+        
+        <div class="payment-method" onclick="selectPayment('cbe')">
+            <img src="https://www.cbe.com.et/images/logo.png" alt="CBE">
+            <p>Commercial Bank of Ethiopia</p>
+        </div>
+
+        <div class="payment-method" onclick="selectPayment('dashen')">
+            <img src="https://www.dashenbanksc.com/sites/default/files/logo_0.png" alt="Dashen">
+            <p>Dashen Bank</p>
+        </div>
+
+        <div class="payment-method" onclick="selectPayment('awash')">
+            <img src="https://awashbank.com/sites/default/files/awash-logo_0.png" alt="Awash">
+            <p>Awash Bank</p>
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label>Amount to Fund (ETB)</label>
+        <input type="number" id="fundAmount" placeholder="Enter amount" min="10" required>
+    </div>
+
+    <!-- CBE Fields -->
+    <div id="cbeFields" class="bank-fields">
+        <div class="form-group">
+            <label>CBE Account Number</label>
+            <input type="text" placeholder="1000XXXXXX">
+        </div>
+        <div class="form-group">
+            <label>CBE Mobile PIN</label>
+            <input type="password" placeholder="****" maxlength="4">
+        </div>
+    </div>
+
+    <!-- Telebirr Fields -->
+    <div id="telebirrFields" class="bank-fields">
+        <div class="form-group">
+            <label>Telebirr Phone Number</label>
+            <input type="tel" placeholder="0912XXXXXX" pattern="09[0-9]{8}">
+        </div>
+        <div class="form-group">
+            <label>Telebirr PIN</label>
+            <input type="password" placeholder="****" maxlength="4">
+        </div>
+    </div>
+
+    <!-- Dashen Fields -->
+    <div id="dashenFields" class="bank-fields">
+        <div class="form-group">
+            <label>Dashen Account Number</label>
+            <input type="text" placeholder="2000XXXXXX">
+        </div>
+        <div class="form-group">
+            <label>OTP Code</label>
+            <input type="text" placeholder="123456" maxlength="6">
+        </div>
+    </div>
+
+    <!-- Awash Fields -->
+    <div id="awashFields" class="bank-fields">
+        <div class="form-group">
+            <label>Awash Account Number</label>
+            <input type="text" placeholder="3000XXXXXX">
+        </div>
+        <div class="form-group">
+            <label>Transaction PIN</label>
+            <input type="password" placeholder="****" maxlength="4">
+        </div>
+    </div>
+
+    <button class="search-btn" onclick="processEthiopianPayment()">Complete Payment</button>
+</div>
+
+<script>
+let selectedPaymentMethod = null;
+
+function selectPayment(method) {
+    selectedPaymentMethod = method;
+    // Hide all fields
+    document.querySelectorAll('.bank-fields').forEach(el => el.style.display = 'none');
+    // Remove all selections
+    document.querySelectorAll('.payment-method').forEach(el => el.classList.remove('selected'));
+    // Show selected
+    event.currentTarget.classList.add('selected');
+    
+    // Show relevant fields
+    if(method === 'cbe') document.getElementById('cbeFields').style.display = 'block';
+    if(method === 'telebirr') document.getElementById('telebirrFields').style.display = 'block';
+    if(method === 'dashen') document.getElementById('dashenFields').style.display = 'block';
+    if(method === 'awash') document.getElementById('awashFields').style.display = 'block';
+}
+
+function processEthiopianPayment() {
+    const amount = parseFloat(document.getElementById('fundAmount').value);
+    
+    if (!amount || amount < 10) {
+        alert('Minimum funding amount is 10 ETB');
+        return;
+    }
+
+    if (!selectedPaymentMethod) {
+        alert('Please select a payment method');
+        return;
+    }
+
+    // Simulate payment processing
+    const paymentData = {
+        method: selectedPaymentMethod,
+        amount: amount,
+        timestamp: new Date().toISOString()
+    };
+
+    // Here you would typically make an API call to your backend
+    // which would then communicate with the bank's API
+    alert(`Payment of ${amount} ETB via ${selectedPaymentMethod.toUpperCase()} is being processed...`);
+    
+    // Simulate successful payment
+    setTimeout(() => {
+        userBalance += amount;
+        document.getElementById('balanceAmount').textContent = userBalance.toFixed(2);
+        localStorage.setItem('userBalance', userBalance);
+        alert(`Payment successful! ${amount} ETB added to your account.`);
+        
+        // Clear form
+        document.getElementById('fundAmount').value = '';
+        document.querySelectorAll('.payment-method').forEach(el => el.classList.remove('selected'));
+        document.querySelectorAll('.bank-fields').forEach(el => el.style.display = 'none');
+    }, 2000);
+}
+</script>
+        <div class="payment-form">
+            <h3>Payment Details</h3>
+            <div class="payment-methods">
+                <div class="payment-method" onclick="selectPayment('credit')">
+                    <i class="fas fa-credit-card"></i>
+                    <p>Credit Card</p>
+                </div>
+                <div class="payment-method" onclick="selectPayment('paypal')">
+                    <i class="fab fa-paypal"></i>
+                    <p>PayPal</p>
+                </div>
+                <div class="payment-method" onclick="selectPayment('mobile')">
+                    <i class="fas fa-mobile-alt"></i>
+                    <p>Mobile Payment</p>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label>Amount to Fund ($)</label>
+                <input type="number" id="fundAmount" placeholder="Enter amount" min="10">
+            </div>
+
+            <div id="creditCardForm">
+                <div class="form-group">
+                    <label>Card Number</label>
+                    <input type="text" placeholder="1234 5678 9012 3456">
+                </div>
+                <div class="form-group">
+                    <label>Expiry Date</label>
+                    <input type="month" placeholder="MM/YY">
+                </div>
+                <div class="form-group">
+                    <label>CVV</label>
+                    <input type="text" placeholder="123">
+                </div>
+            </div>
+
+            <button class="search-btn" onclick="processPayment()">Proceed to Payment</button>
+        </div>
+    </section>
+
+    <!-- Footer remains the same -->
+
+    <script>
+        // Previous JavaScript remains the same
+
+        let userBalance = 0;
+        let selectedPaymentMethod = null;
+
+        function selectAmount(amount) {
+            document.getElementById('fundAmount').value = amount;
+        }
+
+        function selectPayment(method) {
+            selectedPaymentMethod = method;
+            document.querySelectorAll('.payment-method').forEach(item => {
+                item.classList.remove('selected');
+            });
+            event.currentTarget.classList.add('selected');
+        }
+
+        function processPayment() {
+            const amount = parseFloat(document.getElementById('fundAmount').value);
+            
+            if (!amount || amount < 10) {
+                alert('Minimum funding amount is $10');
+                return;
+            }
+
+            if (!selectedPaymentMethod) {
+                alert('Please select a payment method');
+                return;
+            }
+
+            userBalance += amount;
+            document.getElementById('balanceAmount').textContent = userBalance.toFixed(2);
+            alert(`Successfully funded $${amount} to your account!`);
+            
+            // Clear form
+            document.getElementById('fundAmount').value = '';
+            document.querySelectorAll('.payment-method').forEach(item => {
+                item.classList.remove('selected');
+            });
+        }
+
+        function registerDomain(domain) {
+            const domainPrice = 10; // $10 per domain registration
+            
+            if (userBalance >= domainPrice) {
+                userBalance -= domainPrice;
+                document.getElementById('balanceAmount').textContent = userBalance.toFixed(2);
+                alert(`Congratulations! ${domain} has been registered successfully!\nRemaining balance: $${userBalance}`);
+                document.getElementById('domainInput').value = '';
+                document.getElementById('domainResults').innerHTML = '';
+            } else {
+                alert(`Insufficient balance! Domain registration requires $${domainPrice}.\nPlease fund your account first.`);
+            }
+        }
+    </script>
+    <footer>
+	<!-- Add this CSS -->
+<style>
+    .contact {
+        padding: 5rem 5%;
+        background: linear-gradient(135deg, #f5f7fa, #e2e8f0);
+    }
+
+    .contact-container {
+        max-width: 1200px;
+        margin: 0 auto;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 3rem;
+    }
+
+    .contact-info {
+        background: green;
+        padding: 2rem;
+        border-radius: 15px;
+        box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    }
+
+    .contact-form {
+        background: white;
+        padding: 2rem;
+        border-radius: 15px;
+        box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    }
+
+    .form-group {
+        margin-bottom: 1.5rem;
+    }
+
+    .form-group label {
+        display: block;
+        margin-bottom: 0.5rem;
+        color: #2c3e50;
+        font-weight: 500;
+    }
+
+    .form-group input,
+    .form-group textarea,
+    .form-group select {
+        width: 100%;
+        padding: 0.8rem;
+        border: 2px solid #ddd;
+        border-radius: 8px;
+        font-size: 1rem;
+        transition: border-color 0.3s;
+    }
+
+    .form-group input:focus,
+    .form-group textarea:focus,
+    .form-group select:focus {
+        border-color: #3498db;
+        outline: none;
+    }
+
+    .contact-info-item {
+        display: flex;
+        align-items: center;
+        margin-bottom: 1.5rem;
+        padding: 1rem;
+        border-radius: 8px;
+        transition: all 0.3s;
+    }
+
+    .contact-info-item:hover {
+        background: black;
+        transform: translateX(5px);
+    }
+
+    .contact-info-item i {
+        font-size: 1.5rem;
+        margin-right: 1rem;
+        color: #3498db;
+        width: 40px;
+    }
+
+    .map-container {
+        margin-top: 2rem;
+        border-radius: 15px;
+        overflow: hidden;
+        box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    }
+</style>
+
+<!-- Add this HTML -->
+<section class="contact" id="contact">
+    <div class="contact-container">
+        <div class="contact-info">
+            <h2>Contact Information</h2>
+            <div class="contact-info-item">
+                <i class="fas fa-map-marker-alt"></i>
+                <div>
+                    <h3>Our Office</h3>
+                    <p>Addis Ababa, Ethiopia<br>Bole Road, 1234</p>
+                </div>
+            </div>
+            <div class="contact-info-item">
+                <i class="fas fa-phone-alt"></i>
+                <div>
+                    <h3>Phone Number</h3>
+                    <p>+251 910822130<br>+251 929145858</p>
+                </div>
+            </div>
+            <div class="contact-info-item">
+                <i class="fas fa-envelope"></i>
+                <div>
+                    <h3>Email Address</h3>
+                    <p>support@ethiodomain.com<br>sales@ethiodomain.com</p>
+                </div>
+            </div>
+            
+            <div class="map-container">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3940.923646043582!2d38.75735131426929!3d8.980506993547444!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x164b85f88250d38d%3A0x7e19ffe1060e95c6!2sAddis%20Ababa%2C%20Ethiopia!5e0!3m2!1sen!2sus!4v1689876970974!5m2!1sen!2sus" 
+                        width="100%" 
+                        height="200" 
+                        style="border:0;" 
+                        allowfullscreen="" 
+                        loading="lazy">
+                </iframe>
+            </div>
+        </div>
+
+        <div class="contact-form">
+            <h2>Send Us a Message</h2>
+            <form id="contactForm" onsubmit="return handleSubmit(event)">
+                <div class="form-group">
+                    <label>Full Name</label>
+                    <input type="text" placeholder="Enter your name" required>
+                </div>
+                <div class="form-group">
+                    <label>Email Address</label>
+                    <input type="email" placeholder="Enter your email" required>
+                </div>
+                <div class="form-group">
+                    <label>Subject</label>
+                    <select required>
+                        <option value="">Select a subject</option>
+                        <option>Domain Registration</option>
+                        <option>Technical Support</option>
+                        <option>Billing Inquiry</option>
+                        <option>Partnership</option>
+                        <option>Other</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label>Message</label>
+                    <textarea rows="5" placeholder="Write your message..." required></textarea>
+                </div>
+                <button type="submit" class="search-btn">Send Message</button>
+            </form>
+        </div>
+    </div>
+</section>
+
+<!-- Add this JavaScript -->
+<script>
+    function handleSubmit(event) {
+        event.preventDefault();
+        
+        // Get form values
+        const formData = {
+            name: event.target[0].value,
+            email: event.target[1].value,
+            subject: event.target[2].value,
+            message: event.target[3].value
+        };
+
+        // Simple validation
+        if (!formData.name || !formData.email || !formData.message) {
+            alert('Please fill in all required fields');
+            return false;
+        }
+
+        // Simulate form submission
+        console.log('Form submitted:', formData);
+        alert('Thank you for your message! We will respond within 24 hours.');
+        
+        // Reset form
+        event.target.reset();
+        return false;
+    }
+</script>
+        <p>&copy; 2023 EthioDomain. All rights reserved.</p>
+        <div class="social-links" style="margin-top: 1rem;">
+            <a href="#" style="color: white; margin: 0 0.5rem;"><i class="fab fa-facebook"></i></a>
+            <a href="#" style="color: white; margin: 0 0.5rem;"><i class="fab fa-twitter"></i></a>
+            <a href="#" style="color: white; margin: 0 0.5rem;"><i class="fab fa-linkedin"></i></a>
+        </div>
+    </footer>
+
+    <script>
+        function checkDomain() {
+            const domains = ['example', 'test', 'demo', 'ethiodomain'];
+            const input = document.getElementById('domainInput').value.toLowerCase();
+            const resultsDiv = document.getElementById('domainResults');
+            
+            resultsDiv.innerHTML = '';
+            
+            if (!input) {
+                resultsDiv.innerHTML = '<p style="color: #e74c3c;">Please enter a domain name</p>';
+                return;
+            }
+
+            const extensions = ['.com', '.net', '.org', '.et'];
+            let available = true;
+
+            if (domains.includes(input)) {
+                available = false;
+            }
+
+            resultsDiv.innerHTML = extensions.map(ext => `
+                <div class="domain-result">
+                    <span>${input}${ext}</span>
+                    <span style="color: ${available ? '#2ecc71' : '#e74c3c'}">
+                        ${available ? 'Available' : 'Taken'}
+                    </span>
+                    ${available ? `<button onclick="registerDomain('${input}${ext}')" 
+                        style="background: #2ecc71; color: white; border: none; padding: 0.5rem 1rem; border-radius: 5px; cursor: pointer;">
+                        Register
+                    </button>` : ''}
+                </div>
+            `).join('');
+        }
+
+        function registerDomain(domain) {
+            alert(`Congratulations! ${domain} has been registered successfully!`);
+            document.getElementById('domainInput').value = '';
+            document.getElementById('domainResults').innerHTML = '';
+        }
+
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+</html>
